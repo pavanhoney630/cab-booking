@@ -31,6 +31,7 @@ const driverNotificationRoutes = require("./routes/DriverRoutes/driverNotificati
 const OngoingRideDetails = require("./routes/DriverRoutes/rideDetails.routes");
 const driverHistoryRoutes = require("./routes/DriverRoutes/driverHistory.routes");
 const getBookingType = require("./routes/DriverRoutes/getBookingType.routes");
+const driverSupportchatRoutes = require("./routes/DriverRoutes/driverSupportchat.routes")
 
 // User Routes
 const userRoutes = require("./routes/userRoutes/user.routes");
@@ -44,6 +45,7 @@ const vehicleVariantRoutes = require("./routes/AdminRoutes/vehicleVariant.routes
 const issueDetailsRoutes = require("./routes/userRoutes/issueDetails.routes");
 const issueRoutes = require("./routes/userRoutes/issue.routes");
 const userRideDetailsRoutes = require("./routes/userRoutes/userRideDetails.routes");
+const userSupportchatRoutes = require("./routes/userRoutes/userSupportChat.routes")
 
 // Chat Routes
 const chatRoutes = require("./routes/userRoutes/userChat.routes");
@@ -70,6 +72,7 @@ app.use("/api/driverNotification", driverNotificationRoutes);
 app.use("/api/rideDetails", OngoingRideDetails);
 app.use("/api", driverHistoryRoutes);
 app.use("/api", getBookingType);
+app.use("/api/driverSupportchat",driverSupportchatRoutes);
 
 // User
 app.use("/api/user", userRoutes);
@@ -83,6 +86,7 @@ app.use("/api", vehicleVariantRoutes);
 app.use("/api/issueDetails", issueDetailsRoutes);
 app.use("/api/issue", issueRoutes);
 app.use("/api/rideDetails", userRideDetailsRoutes);
+app.use("/api/userSupportchat",userSupportchatRoutes);
 
 // Chat
 app.use("/api/userChat", chatRoutes);

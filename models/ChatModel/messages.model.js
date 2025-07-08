@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const messageSchema = new mongoose.Schema({
+  ticketId: { type: String, required: true },
   senderId: { type: String, required: true },
   senderType: { type: String, enum: ['User', 'Driver'], required: true },
   receiverId: { type: String, required: true },
